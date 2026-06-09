@@ -12,13 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="images/icon.svg">
     <title>Moto Clube Vida Selvagem</title>
     <style>
-        body {
-            background-color: #000000;
-            font-family: sans-serif;
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-
+        /* Define a fonte 'Teko' importada do Google Fonts para todos os títulos */
         h1,
         h2,
         h3,
@@ -29,31 +23,48 @@
             font-family: "Teko", sans-serif;
             text-transform: uppercase;
         }
-
-        .w3-hover-none:hover {
-            color: #ffffff !important;
-            text-decoration: none !important;
-        }
     </style>
 </head>
 
 <body class="w3-black">
-    <!-- Barra de Navegação Superior -->
-    <header class="w3-bar w3-black w3-padding-16 w3-xlarge">
+    <!-- Barra de Navegação Superior - Desktop -->
+    <header class="w3-bar w3-black w3-padding-16 w3-xlarge w3-hide-small">
         <div class="w3-content">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white moto-font">
+            <!-- Link do logotipo com hover simples de opacidade -->
+            <a href="index.html" class="w3-bar-item w3-hover-opacity w3-text-white moto-font"
+                style="text-decoration: none;">
                 <img src="images/icon.svg" alt="Ícone" class="w3-margin-right"
-                    style="width: 28px; height: 28px; display: inline-block; vertical-align: middle;"> <b>MOTO CLUBE
-                    VIDA SELVAGEM</b>
+                    style="width: 28px; height: 28px; vertical-align: middle;"> <b>MOTO CLUBE VIDA SELVAGEM</b>
             </a>
+            <!-- Links da navegação usando classes padrão do W3.CSS para efeito de hover sem CSS customizado -->
             <nav class="w3-right w3-xlarge">
-                <a href="index.html#sobre" class="w3-button w3-hover-none w3-text-white moto-font">Sobre</a>
-                <a href="parceiros.html" class="w3-button w3-hover-none w3-text-white moto-font">Parceiros</a>
-                <a href="faq.html" class="w3-button w3-hover-none w3-text-white moto-font">FAQ</a>
-                <a href="index.html#loja" class="w3-button w3-white w3-text-black w3-round moto-font"
-                    style="margin-left: 16px;"><b>LOJA</b></a>
+                <a href="index.html#sobre"
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Sobre</a>
+                <a href="parceiros.html"
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Parceiros</a>
+                <a href="faq.html" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">FAQ</a>
+                <a href="index.html#loja"
+                    class="w3-button w3-white w3-text-black w3-round w3-margin-left moto-font"><b>LOJA</b></a>
             </nav>
         </div>
+    </header>
+
+    <!-- Barra de Navegação Superior - Mobile -->
+    <header class="w3-container w3-black w3-padding-16 w3-xlarge w3-hide-medium w3-hide-large w3-center">
+        <div class="w3-margin-bottom">
+            <!-- Link do logotipo simplificado sem padding e botão redundante -->
+            <a href="index.html" class="w3-hover-opacity w3-text-white moto-font" style="text-decoration: none;">
+                <img src="images/icon.svg" alt="Ícone" class="w3-margin-right"
+                    style="width: 28px; height: 28px; vertical-align: middle;"> <b>MOTO CLUBE VIDA SELVAGEM</b>
+            </a>
+        </div>
+        <!-- Menu mobile simplificado usando o espaçamento padrão do W3.CSS -->
+        <nav class="moto-font">
+            <a href="index.html#sobre" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Sobre</a>
+            <a href="parceiros.html" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Parceiros</a>
+            <a href="faq.html" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">FAQ</a>
+            <a href="index.html#loja" class="w3-button w3-white w3-text-black w3-round w3-margin-left"><b>LOJA</b></a>
+        </nav>
     </header>
 
     <!-- Conteúdo principal-->
@@ -81,22 +92,23 @@
     </main>
 
     <!-- Rodapé-->
-    <footer class="w3-container w3-center">
-        <div class="w3-content" style="margin-top: 36px;">
-            <hr class="w3-border-grey" style="opacity: 0.25; margin-bottom: 12px;">
+    <footer class="w3-container w3-center w3-padding-32">
+        <div class="w3-content">
+            <hr class="w3-border-grey" style="opacity: 0.25;">
             <div>
                 <a href="https://open.spotify.com/playlist/7JxV1M6DMbBMdXWDvmHlBm?si=c48c4f390c1640de" target="_blank"
-                    class="w3-button w3-hover-none w3-text-white">
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">
                     <i class="fa fa-spotify w3-text-green w3-margin-right"></i> Playlist Oficial
                 </a>
 
                 <a href="https://www.instagram.com/mcvidaselvagem/" target="_blank"
-                    class="w3-button w3-hover-none w3-text-white">
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">
                     <i class="fa fa-instagram w3-text-red w3-margin-right"></i> Instagram
                 </a>
             </div>
 
-            <p class="w3-text-grey w3-small">© 2026 Moto Clube Vida Selvagem. Todos os direitos reservados.</p>
+            <p class="w3-text-grey w3-small w3-margin-top">© 2026 Moto Clube Vida Selvagem. Todos os direitos
+                reservados.</p>
         </div>
     </footer>
 

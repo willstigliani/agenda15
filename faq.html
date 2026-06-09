@@ -14,13 +14,7 @@
     <link rel="icon" type="image/svg+xml" href="images/icon.svg">
     <title>FAQ - Moto Clube Vida Selvagem</title>
     <style>
-        body {
-            background-color: #000000;
-            font-family: sans-serif;
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-
+        /* Define a fonte 'Teko' importada do Google Fonts para todos os títulos */
         h1,
         h2,
         h3,
@@ -32,32 +26,58 @@
             text-transform: uppercase;
         }
 
-        /* Efeito de hover com sublinhado sem alterar a cor */
-        .w3-hover-none:hover {
-            color: #ffffff !important;
-            text-decoration: none !important;
+        /* Remove a seta (triângulo) padrão do elemento <details> nos navegadores */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details summary {
+            list-style: none;
         }
     </style>
 </head>
 
 <body class="w3-black">
-    <!-- Barra de Navegação Superior -->
-    <header class="w3-bar w3-black w3-padding-16 w3-xlarge">
+    <!-- Barra de Navegação Superior - Desktop -->
+    <header class="w3-bar w3-black w3-padding-16 w3-xlarge w3-hide-small">
         <div class="w3-content">
-            <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white moto-font">
+            <!-- Link do logotipo com hover simples de opacidade -->
+            <a href="index.html" class="w3-bar-item w3-hover-opacity w3-text-white moto-font"
+                style="text-decoration: none;">
                 <img src="images/icon.svg" alt="Ícone" class="w3-margin-right"
-                    style="width: 28px; height: 28px; display: inline-block; vertical-align: middle;"> <b>MOTO CLUBE
-                    VIDA SELVAGEM</b>
+                    style="width: 28px; height: 28px; vertical-align: middle;"> <b>MOTO CLUBE VIDA SELVAGEM</b>
             </a>
+            <!-- Links da navegação usando classes do W3.CSS (inclusive para a borda ativa do FAQ) -->
             <nav class="w3-right w3-xlarge">
-                <a href="index.html#sobre" class="w3-button w3-hover-none w3-text-white moto-font">Sobre</a>
-                <a href="parceiros.html" class="w3-button w3-hover-none w3-text-white moto-font">Parceiros</a>
-                <a href="faq.html" class="w3-button w3-hover-none w3-text-white moto-font w3-border-bottom"
-                    style="border-bottom: 2px solid white !important;">FAQ</a>
-                <a href="index.html#loja" class="w3-button w3-white w3-text-black w3-round moto-font"
-                    style="margin-left: 16px;"><b>LOJA</b></a>
+                <a href="index.html#sobre"
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Sobre</a>
+                <a href="parceiros.html"
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Parceiros</a>
+                <a href="faq.html"
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font w3-border-bottom w3-border-white">FAQ</a>
+                <a href="index.html#loja"
+                    class="w3-button w3-white w3-text-black w3-round w3-margin-left moto-font"><b>LOJA</b></a>
             </nav>
         </div>
+    </header>
+
+    <!-- Barra de Navegação Superior - Mobile -->
+    <header class="w3-container w3-black w3-padding-16 w3-xlarge w3-hide-medium w3-hide-large w3-center">
+        <div class="w3-margin-bottom">
+            <!-- Link do logotipo simplificado sem padding e botão redundante -->
+            <a href="index.html" class="w3-hover-opacity w3-text-white moto-font" style="text-decoration: none;">
+                <img src="images/icon.svg" alt="Ícone" class="w3-margin-right"
+                    style="width: 28px; height: 28px; vertical-align: middle;"> <b>MOTO CLUBE VIDA SELVAGEM</b>
+            </a>
+        </div>
+        <!-- Menu mobile simplificado usando o espaçamento padrão do W3.CSS e borda ativa nativa -->
+        <nav class="moto-font">
+            <a href="index.html#sobre" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Sobre</a>
+            <a href="parceiros.html" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Parceiros</a>
+            <a href="faq.html"
+                class="w3-button w3-hover-black w3-hover-text-grey w3-text-white w3-border-bottom w3-border-white">FAQ</a>
+            <a href="index.html#loja" class="w3-button w3-white w3-text-black w3-round w3-margin-left"><b>LOJA</b></a>
+        </nav>
     </header>
 
     <!-- Conteúdo principal -->
@@ -73,14 +93,19 @@
         <!-- Container do FAQ -->
         <div class="w3-container w3-margin-top">
             <!-- Pergunta 1 -->
-            <details style="border-bottom: 1px solid #333;">
-                <summary class="w3-button w3-xlarge w3-padding-16 moto-font w3-hover-none"
-                    style="display: flex; justify-content: space-between; padding: 0;">
-                    <span>Como faço para me juntar ao Moto Clube Vida Selvagem?</span>
-                    <i class="fa fa-chevron-down w3-text-grey"></i>
+            <details class="w3-border-bottom w3-border-dark-grey">
+                <summary class="w3-button w3-block w3-black w3-hover-black w3-hover-text-grey w3-padding-16"
+                    style="white-space: normal;">
+                    <div class="w3-cell-row moto-font w3-xlarge">
+                        <div class="w3-cell w3-cell-top w3-left-align">Como faço para me juntar ao Moto Clube Vida
+                            Selvagem?</div>
+                        <div class="w3-cell w3-cell-top w3-right-align" style="width: 24px;">
+                            <i class="fa fa-chevron-down w3-text-grey w3-margin-right"></i>
+                        </div>
+                    </div>
                 </summary>
-                <div class="w3-text-grey">
-                    <p class="w3-justify" style="margin-top: 0">
+                <div class="w3-text-grey w3-container w3-padding-16">
+                    <p class="w3-justify">
                         O Vida Selvagem não é apenas um clube de motociclismo comum; é uma irmandade. Para fazer parte,
                         você precisa rodar conosco, demonstrar lealdade, respeito e comprometimento. A atitude e o
                         espírito de confronto com o conformismo urbano valem mais do que qualquer marca ou cilindrada de
@@ -90,14 +115,19 @@
             </details>
 
             <!-- Pergunta 2 -->
-            <details style="border-bottom: 1px solid #333;">
-                <summary class="w3-button w3-xlarge w3-padding-16 moto-font w3-hover-none"
-                    style="display: flex; justify-content: space-between; padding: 0;">
-                    <span>Existe alguma restrição de cilindrada ou modelo de moto?</span>
-                    <i class="fa fa-chevron-down w3-text-grey"></i>
+            <details class="w3-border-bottom w3-border-dark-grey">
+                <summary class="w3-button w3-block w3-black w3-hover-black w3-hover-text-grey w3-padding-16"
+                    style="white-space: normal;">
+                    <div class="w3-cell-row moto-font w3-xlarge">
+                        <div class="w3-cell w3-cell-top w3-left-align">Existe alguma restrição de cilindrada ou modelo
+                            de moto?</div>
+                        <div class="w3-cell w3-cell-top w3-right-align" style="width: 24px;">
+                            <i class="fa fa-chevron-down w3-text-grey w3-margin-right"></i>
+                        </div>
+                    </div>
                 </summary>
-                <div class="w3-text-grey">
-                    <p class="w3-justify" style="margin-top: 0;">
+                <div class="w3-text-grey w3-container w3-padding-16">
+                    <p class="w3-justify">
                         Nenhuma. Diferente de motoclubes tradicionais e puristas, nós valorizamos a atitude acima da
                         estética. Não importa se você pilota uma custom, uma esportiva, uma trail ou uma scooter. Se
                         você não se curva ao sistema e usa a moto como ferramenta de liberdade, você é bem-vindo.
@@ -106,15 +136,20 @@
             </details>
 
             <!-- Pergunta 3 -->
-            <details style="border-bottom: 1px solid #333;">
-                <summary class="w3-button w3-xlarge w3-padding-16 moto-font w3-hover-none"
-                    style="display: flex; justify-content: space-between; padding: 0;">
-                    <span>O que significa o lema "Vivendo cada dia mais sujo e agressivo"?</span>
-                    <i class="fa fa-chevron-down w3-text-grey"></i>
+            <details class="w3-border-bottom w3-border-dark-grey">
+                <summary class="w3-button w3-block w3-black w3-hover-black w3-hover-text-grey w3-padding-16"
+                    style="white-space: normal;">
+                    <div class="w3-cell-row moto-font w3-xlarge">
+                        <div class="w3-cell w3-cell-top w3-left-align">O que significa o lema "Vivendo cada dia mais
+                            sujo e agressivo"?</div>
+                        <div class="w3-cell w3-cell-top w3-right-align" style="width: 24px;">
+                            <i class="fa fa-chevron-down w3-text-grey w3-margin-right"></i>
+                        </div>
+                    </div>
                 </summary>
-                <div class="w3-text-grey">
-                    <p class="w3-justify" style="margin-top: 0;">
-                        É nossa postura diante de uma metrópole apática. A "sujeira" representa a poeira das estradas e
+                <div class="w3-text-grey w3-container w3-padding-16">
+                    <p class="w3-justify">
+                        É nossa postura diante de uma metrórole apática. A "sujeira" representa a poeira das estradas e
                         das marginais em nossos coletes — a recusa em ser higienizado pelas aparências sociais. A
                         "agressividade" é nossa prontidão: a combatividade ativa para proteger a irmandade e manter a
                         autogestão.
@@ -123,14 +158,18 @@
             </details>
 
             <!-- Pergunta 4 -->
-            <details style="border-bottom: 1px solid #333;">
-                <summary class="w3-button w3-xlarge w3-padding-16 moto-font w3-hover-none"
-                    style="display: flex; justify-content: space-between; padding: 0;">
-                    <span>Onde fica a sede do clube?</span>
-                    <i class="fa fa-chevron-down w3-text-grey"></i>
+            <details class="w3-border-bottom w3-border-dark-grey">
+                <summary class="w3-button w3-block w3-black w3-hover-black w3-hover-text-grey w3-padding-16"
+                    style="white-space: normal;">
+                    <div class="w3-cell-row moto-font w3-xlarge">
+                        <div class="w3-cell w3-cell-top w3-left-align">Onde fica a sede do clube?</div>
+                        <div class="w3-cell w3-cell-top w3-right-align" style="width: 24px;">
+                            <i class="fa fa-chevron-down w3-text-grey w3-margin-right"></i>
+                        </div>
+                    </div>
                 </summary>
-                <div class="w3-text-grey">
-                    <p class="w3-justify" style="margin-top: 0;">
+                <div class="w3-text-grey w3-container w3-padding-16">
+                    <p class="w3-justify">
                         Nascemos na Zona Oeste de São Paulo em 2025. Não temos uma sede comercial aberta ao público em
                         geral, pois nosso território é a própria rua. No entanto, costumamos nos reunir em locais
                         parceiros, como o TED's Rock Bar. Fique atento às nossas redes sociais para saber os pontos de
@@ -140,14 +179,18 @@
             </details>
 
             <!-- Pergunta 5 -->
-            <details style="border-bottom: 1px solid #333;">
-                <summary class="w3-button w3-xlarge w3-padding-16 moto-font w3-hover-none"
-                    style="display: flex; justify-content: space-between; padding: 0;">
-                    <span>Quem é o Suricato no escudo do clube?</span>
-                    <i class="fa fa-chevron-down w3-text-grey"></i>
+            <details class="w3-border-bottom w3-border-dark-grey">
+                <summary class="w3-button w3-block w3-black w3-hover-black w3-hover-text-grey w3-padding-16"
+                    style="white-space: normal;">
+                    <div class="w3-cell-row moto-font w3-xlarge">
+                        <div class="w3-cell w3-cell-top w3-left-align">Quem é o Suricato no escudo do clube?</div>
+                        <div class="w3-cell w3-cell-top w3-right-align" style="width: 24px;">
+                            <i class="fa fa-chevron-down w3-text-grey w3-margin-right"></i>
+                        </div>
+                    </div>
                 </summary>
-                <div class="w3-text-grey">
-                    <p class="w3-justify" style="margin-top: 0;">
+                <div class="w3-text-grey w3-container w3-padding-16">
+                    <p class="w3-justify">
                         O Suricato é o nosso eterno vigilante. Ele simboliza a atenção constante, a vida em comunidade,
                         a proteção mútua e a agilidade nas ruas caóticas da cidade.
                     </p>
@@ -157,22 +200,23 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="w3-container w3-center">
-        <div class="w3-content" style="margin-top: 36px;">
-            <hr class="w3-border-grey" style="opacity: 0.25; margin-bottom: 12px;">
+    <footer class="w3-container w3-center w3-padding-32">
+        <div class="w3-content">
+            <hr class="w3-border-grey" style="opacity: 0.25;">
             <div>
                 <a href="https://open.spotify.com/playlist/7JxV1M6DMbBMdXWDvmHlBm?si=c48c4f390c1640de" target="_blank"
-                    class="w3-button w3-hover-none w3-text-white w3-large moto-font">
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white w3-large moto-font">
                     <i class="fa fa-spotify w3-text-green w3-margin-right"></i> Playlist Oficial
                 </a>
 
                 <a href="https://www.instagram.com/mcvidaselvagem/" target="_blank"
-                    class="w3-button w3-hover-none w3-text-white w3-large moto-font">
+                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white w3-large moto-font">
                     <i class="fa fa-instagram w3-text-red w3-margin-right"></i> Instagram
                 </a>
             </div>
 
-            <p class="w3-text-grey w3-small">© 2026 Moto Clube Vida Selvagem. Todos os direitos reservados.</p>
+            <p class="w3-text-grey w3-small w3-margin-top">© 2026 Moto Clube Vida Selvagem. Todos os direitos
+                reservados.</p>
         </div>
     </footer>
 
