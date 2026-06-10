@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Font Awesome para Ícones -->
     <link class="w3-text-white" rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Fonte Teko (Google Fonts) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko:400,700">
     <link rel="icon" type="image/svg+xml" href="images/icon.svg">
     <title>FAQ - Moto Clube Vida Selvagem</title>
     <style>
-        /* Define a fonte 'Teko' importada do Google Fonts para todos os títulos */
         h1,
         h2,
         h3,
@@ -26,7 +23,6 @@
             text-transform: uppercase;
         }
 
-        /* Remove a seta (triângulo) padrão do elemento <details> nos navegadores */
         details summary::-webkit-details-marker {
             display: none;
         }
@@ -39,30 +35,25 @@
 
 <body class="w3-black">
     <!-- Barra de Navegação Superior - Desktop -->
-    <header class="w3-bar w3-black w3-padding-16 w3-xlarge w3-hide-small">
+    <header class="w3-bar w3-padding-16 w3-xlarge w3-hide-small">
         <div class="w3-content">
-            <!-- Link do logotipo com hover simples de opacidade -->
-            <a href="index.html" class="w3-bar-item w3-hover-opacity w3-text-white moto-font"
-                style="text-decoration: none;">
-                <img src="images/icon.svg" alt="Ícone" class="w3-margin-right"
+            <a href="index.html" class="w3-bar-item w3-text-white moto-font" style="text-decoration: none;">
+                <img src="images/icon.svg" class="w3-margin-right"
                     style="width: 28px; height: 28px; vertical-align: middle;"> <b>MOTO CLUBE VIDA SELVAGEM</b>
             </a>
-            <!-- Links da navegação usando classes do W3.CSS (inclusive para a borda ativa do FAQ) -->
-            <nav class="w3-right w3-xlarge">
-                <a href="index.html#sobre"
-                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Sobre</a>
-                <a href="parceiros.html"
-                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font">Parceiros</a>
+            <nav class="w3-right w3-xlarge moto-font">
+                <a href="index.html#sobre" class="w3-button w3-hover-black w3-text-white">Sobre</a>
+                <a href="parceiros.html" class="w3-button w3-hover-black w3-text-white">Parceiros</a>
                 <a href="faq.html"
-                    class="w3-button w3-hover-black w3-hover-text-grey w3-text-white moto-font w3-border-bottom w3-border-white">FAQ</a>
+                    class="w3-button w3-hover-black w3-text-white w3-border-bottom w3-border-white">FAQ</a>
                 <a href="index.html#loja"
-                    class="w3-button w3-white w3-text-black w3-round w3-margin-left moto-font"><b>LOJA</b></a>
+                    class="w3-button w3-white w3-text-black w3-round w3-margin-left"><b>LOJA</b></a>
             </nav>
         </div>
     </header>
 
     <!-- Barra de Navegação Superior - Mobile -->
-    <header class="w3-container w3-black w3-padding-16 w3-xlarge w3-hide-medium w3-hide-large w3-center">
+    <header class="w3-container w3-padding-16 w3-xlarge w3-hide-medium w3-hide-large w3-center">
         <div class="w3-margin-bottom">
             <!-- Link do logotipo simplificado sem padding e botão redundante -->
             <a href="index.html" class="w3-hover-opacity w3-text-white moto-font" style="text-decoration: none;">
@@ -72,10 +63,9 @@
         </div>
         <!-- Menu mobile simplificado usando o espaçamento padrão do W3.CSS e borda ativa nativa -->
         <nav class="moto-font">
-            <a href="index.html#sobre" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Sobre</a>
-            <a href="parceiros.html" class="w3-button w3-hover-black w3-hover-text-grey w3-text-white">Parceiros</a>
-            <a href="faq.html"
-                class="w3-button w3-hover-black w3-hover-text-grey w3-text-white w3-border-bottom w3-border-white">FAQ</a>
+            <a href="index.html#sobre" class="w3-button w3-hover-black w3-text-white">Sobre</a>
+            <a href="parceiros.html" class="w3-button w3-hover-black w3-text-white">Parceiros</a>
+            <a href="faq.html" class="w3-button w3-hover-black w3-text-white w3-border-bottom w3-border-white">FAQ</a>
             <a href="index.html#loja" class="w3-button w3-white w3-text-black w3-round w3-margin-left"><b>LOJA</b></a>
         </nav>
     </header>
@@ -86,7 +76,7 @@
         <h1 class="w3-center w3-text-white w3-jumbo" style="margin-top: 0; line-height: 0.9; margin-bottom: 24px;">
             Perguntas Frequentes
         </h1>
-        <p class="w3-text-grey w3-large w3-center w3-margin-bottom" style="line-height: 1.6;">
+        <p class="w3-text-grey w3-large w3-center w3-margin-bottom">
             Tudo o que você precisa saber sobre o Moto Clube Vida Selvagem.
         </p>
 
